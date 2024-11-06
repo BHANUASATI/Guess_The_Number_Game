@@ -1,0 +1,90 @@
+*,
+*:before,
+*:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #8e569c, #c356a0);
+    font-family: 'Poppins', sans-serif;
+}
+.container {
+    width: 380px;
+    background-color: #ffffff;
+    padding: 30px 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+h1 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+h3 {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+input[type="text"] {
+    width: 90%;
+    padding: 15px;
+    border-radius: 5px;
+    border: 2px solid #202020;
+    font-size: 24px;
+    margin-top: 20px;
+    transition: border 0.3s;
+}
+input[type="text"]:focus {
+    border-color: #663399;
+    outline: none;
+}
+button {
+    width: 160px;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #663399;
+    color: #ffffff;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+button:hover {
+    background-color: #8e569c;
+    transform: translateY(-2px);
+}
+p {
+    font-weight: 400;
+    margin-top: 10px;
+}
+span {
+    font-weight: 600;
+    color: #663399;
+}
+
+
+
+
+@keyframes fireworks {
+    0% { opacity: 1; transform: scale(0.5) translateY(0); }
+    50% { opacity: 0.7; transform: scale(1.5) translateY(-80px); }
+    100% { opacity: 0; transform: scale(2) translateY(-150px); }
+}
+
+.firework {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    animation: fireworks 1.2s ease-out forwards;
+    pointer-events: none;
+    opacity: 0;
+}
